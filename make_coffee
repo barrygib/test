@@ -1,0 +1,12 @@
+int coffeeBeans
+int coffeeGrinder
+
+void setup()
+{
+  
+}
+
+void loop()
+{
+
+}
