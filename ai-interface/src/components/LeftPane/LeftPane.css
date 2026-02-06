@@ -1,0 +1,288 @@
+.left-pane {
+  width: 280px;
+  min-width: 280px;
+  background: #1a1a2e;
+  border-right: 1px solid #2a2a4a;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: width 0.2s ease, min-width 0.2s ease;
+}
+
+.left-pane.collapsed {
+  width: 52px;
+  min-width: 52px;
+}
+
+.left-pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.left-pane-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.collapsed .left-pane-title {
+  display: none;
+}
+
+.collapse-btn {
+  background: none;
+  border: 1px solid #3a3a5a;
+  color: #a0a0c0;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.collapse-btn:hover {
+  background: #2a2a4a;
+  color: #e0e0e0;
+}
+
+.left-pane-actions {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 10px 14px;
+  border: 1px solid #3a3a5a;
+  background: #22223a;
+  color: #c0c0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.action-btn:hover {
+  background: #2e2e4e;
+  border-color: #5a5a8a;
+}
+
+.new-chat-btn {
+  background: #2d4a7a;
+  border-color: #3d6aaa;
+  color: #d0e0ff;
+}
+
+.new-chat-btn:hover {
+  background: #3a5a9a;
+}
+
+.new-folder-form {
+  padding: 0 12px 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.new-folder-form input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #3a3a5a;
+  background: #16162a;
+  color: #e0e0e0;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.new-folder-form input:focus {
+  outline: none;
+  border-color: #5a7aba;
+}
+
+.new-folder-form button {
+  padding: 8px 12px;
+  background: #2d4a7a;
+  border: none;
+  color: #d0e0ff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 8px;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #b0b0d0;
+  font-size: 13px;
+  transition: background 0.15s;
+  gap: 8px;
+  position: relative;
+}
+
+.chat-item:hover {
+  background: #22223a;
+}
+
+.chat-item.active {
+  background: #2a2a4a;
+  color: #e0e0ff;
+}
+
+.chat-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.chat-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-actions {
+  display: none;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.chat-item:hover .chat-actions {
+  display: flex;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #808090;
+  cursor: pointer;
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.icon-btn:hover {
+  background: #3a3a5a;
+  color: #e0e0e0;
+}
+
+.rename-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid #5a7aba;
+  background: #16162a;
+  color: #e0e0e0;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.rename-input:focus {
+  outline: none;
+}
+
+.folder-group {
+  margin-bottom: 4px;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #c0c0e0;
+  font-size: 13px;
+  gap: 6px;
+  transition: background 0.15s;
+}
+
+.folder-header:hover {
+  background: #22223a;
+}
+
+.folder-arrow {
+  font-size: 10px;
+  color: #808090;
+  width: 12px;
+}
+
+.folder-name {
+  flex: 1;
+}
+
+.folder-count {
+  color: #606080;
+  font-size: 12px;
+}
+
+.folder-actions {
+  display: none;
+  gap: 2px;
+}
+
+.folder-header:hover .folder-actions {
+  display: flex;
+}
+
+.folder-chats {
+  padding-left: 20px;
+}
+
+.folder-empty {
+  padding: 8px 12px;
+  color: #505070;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.section-label {
+  padding: 8px 12px 4px;
+  color: #606080;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.left-pane-footer {
+  border-top: 1px solid #2a2a4a;
+  padding: 8px;
+}
+
+.settings-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #808090;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.settings-item:hover {
+  background: #22223a;
+  color: #b0b0d0;
+}
+
+.chat-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-list::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 3px;
+}
