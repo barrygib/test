@@ -1,0 +1,266 @@
+.right-pane {
+  width: 380px;
+  min-width: 380px;
+  background: #16162a;
+  border-left: 1px solid #2a2a4a;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.right-pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #2a2a4a;
+  background: #1a1a2e;
+}
+
+.right-pane-header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-pane-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d0d0e0;
+  margin: 0;
+}
+
+.right-pane-subtitle {
+  font-size: 11px;
+  color: #606080;
+  margin-top: 2px;
+}
+
+.close-panel-btn {
+  background: none;
+  border: 1px solid #3a3a5a;
+  color: #a0a0c0;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+
+.close-panel-btn:hover {
+  background: #2a2a4a;
+  color: #e0e0e0;
+  border-color: #5a5a8a;
+}
+
+.selected-text-section {
+  padding: 14px 16px;
+  border-bottom: 1px solid #2a2a4a;
+  background: #1e1e34;
+}
+
+.selected-text-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #7070a0;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.selected-text-content {
+  font-size: 13px;
+  color: #b0b0d0;
+  line-height: 1.6;
+  padding: 10px 12px;
+  background: #141428;
+  border-radius: 8px;
+  border-left: 3px solid #4a6aba;
+  max-height: 150px;
+  overflow-y: auto;
+  font-style: italic;
+}
+
+.selected-text-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.selected-text-content::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 2px;
+}
+
+.side-panel-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+}
+
+.side-panel-empty {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.side-panel-empty p {
+  color: #606080;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quick-action-btn {
+  padding: 10px 14px;
+  border: 1px solid #2a2a4a;
+  background: #1a1a30;
+  color: #a0a0c0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.quick-action-btn:hover {
+  background: #22223a;
+  border-color: #4a4a7a;
+  color: #d0d0ff;
+}
+
+.side-message {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+}
+
+.side-message + .side-message {
+  border-top: 1px solid #1e1e32;
+}
+
+.side-message-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  background: #1e1e32;
+}
+
+.side-message.user .side-message-avatar {
+  background: #2a3a5a;
+}
+
+.side-message.assistant .side-message-avatar {
+  background: #2a2a4a;
+}
+
+.side-message-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.side-message-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #808090;
+  margin-bottom: 4px;
+}
+
+.side-message-body {
+  font-size: 13px;
+  color: #c0c0e0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.side-panel-input-area {
+  padding: 12px 14px 16px;
+  border-top: 1px solid #2a2a4a;
+  background: #14142a;
+}
+
+.side-panel-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.side-panel-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #3a3a5a;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: none;
+  line-height: 1.5;
+  min-height: 18px;
+  max-height: 120px;
+}
+
+.side-panel-input:focus {
+  outline: none;
+  border-color: #5a7aba;
+  box-shadow: 0 0 0 2px rgba(90, 122, 186, 0.2);
+}
+
+.side-panel-input::placeholder {
+  color: #505070;
+}
+
+.side-panel-send-btn {
+  padding: 10px 14px;
+  background: #3a5a9a;
+  border: none;
+  color: #e0e8ff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.side-panel-send-btn:hover:not(:disabled) {
+  background: #4a6aba;
+}
+
+.side-panel-send-btn:disabled {
+  background: #2a2a4a;
+  color: #505070;
+  cursor: not-allowed;
+}
+
+.side-panel-chat::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-panel-chat::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.side-panel-chat::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 3px;
+}
